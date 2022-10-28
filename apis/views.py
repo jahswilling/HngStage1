@@ -18,4 +18,4 @@ def index(request):
             " To gain more professional experience, I recently completed the Udacity cloud developer nano-degree program. "+
             "I've worked with cloud infrastructure for the past year to build serverless apps, and microservices and am well-versed in various cloud technologies such as S3, SNS, CloudFront, lambda, dynamo, API gateway, ELB, and others."
             }
-    return Response(data,header=header)
+    return Response(data,headers=header)
