@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    
     'corsheaders',
 ]
 
@@ -132,4 +131,8 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = ["*",]
+# CORS_ALLOWED_ORIGINS = ["*"]
+# CSRF_TRUSTED_ORIGINS = ["*"]
+
+REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
+CORS_ORIGIN_ALLOW_ALL = True
