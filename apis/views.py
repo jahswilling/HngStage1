@@ -1,9 +1,10 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-@api_view()
+
+@api_view(["GET"])
 def index(request):
-    
+    header = {"Access-Control-Allow-Origin":"*"}
     data = { "slackUsername": "Javi", 
             "backend": True, "age": 26, 
             "bio": "Hi, I am jahswill Ovedhe  a self-motivated software engineer , "+
@@ -17,4 +18,4 @@ def index(request):
             " To gain more professional experience, I recently completed the Udacity cloud developer nano-degree program. "+
             "I've worked with cloud infrastructure for the past year to build serverless apps, and microservices and am well-versed in various cloud technologies such as S3, SNS, CloudFront, lambda, dynamo, API gateway, ELB, and others."
             }
-    return Response(data)
+    return Response(data,header=header)
